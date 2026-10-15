@@ -10,8 +10,8 @@ export function Hero({ t }: { t: Dictionary }) {
   return (
     <section className="bg-white pt-14 pb-[72px] max-[760px]:pt-6 max-[760px]:pb-12">
       <div className="wrap hero-grid">
-        {/* On phones this column dissolves (.hero-text) so the photo sits between the title and the subtext. */}
-        <div className="hero-text flex flex-col gap-[26px]">
+        {/* On phones this column dissolves (.m-contents) so the photo sits between the title and the subtext. */}
+        <div className="m-contents flex flex-col gap-[26px]">
           <span className="eyebrow">{t.heroEyebrow}</span>
           <h1 className="text-[clamp(40px,5.2vw,68px)] leading-[1.04] font-bold tracking-[-0.03em] text-balance">
             {t.heroH1a} <span className="text-primary">{t.heroH1b}</span>

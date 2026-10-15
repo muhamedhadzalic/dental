@@ -8,8 +8,8 @@ import team from '@/public/images/team.jpg';
 export function Nervous({ t }: { t: Dictionary }) {
   return (
     <section id="nervozni" className="cv bg-white py-[104px]">
-      <div className="wrap split !items-start">
-        <div className="reveal relative pr-7 pb-7">
+      <div className="wrap split nervous-grid !items-start">
+        <div className="reveal relative pr-7 pb-7 max-[980px]:order-1 max-[980px]:my-1">
           <div aria-hidden="true" className="absolute right-0 bottom-0 h-[70%] w-[70%] rounded-xl3 bg-sand" />
           <div className="relative aspect-[4/4.6] overflow-hidden rounded-xl3">
             <Image
@@ -28,11 +28,12 @@ export function Nervous({ t }: { t: Dictionary }) {
             <p className="text-[15px] leading-[1.45] font-semibold">{t.fearFloat}</p>
           </div>
         </div>
-        <div className="flex flex-col gap-[22px]">
+        {/* On phones this column dissolves (.m-contents) so the photo sits right below the title. */}
+        <div className="m-contents flex flex-col gap-[22px]">
           <span className="eyebrow reveal">{t.fearEyebrow}</span>
           <h2 className="h2 reveal">{t.fearTitle}</h2>
-          <p className="lead reveal">{t.fearText}</p>
-          <ol className="mt-2.5 mb-0 flex list-none flex-col p-0">
+          <p className="lead reveal max-[980px]:order-2">{t.fearText}</p>
+          <ol className="mt-2.5 mb-0 flex list-none flex-col p-0 max-[980px]:order-2">
             {t.fearSteps.map((st, i) => (
               <li key={st.title} className="reveal grid grid-cols-[48px_1fr] gap-[18px]">
                 <div className="flex flex-col items-center">
@@ -51,12 +52,12 @@ export function Nervous({ t }: { t: Dictionary }) {
               </li>
             ))}
           </ol>
-          <div className="reveal flex flex-wrap gap-2.5">
+          <div className="reveal flex flex-wrap gap-2.5 max-[980px]:order-2">
             <span className="chip">{t.fearChip1}</span>
             <span className="chip">{t.fearChip2}</span>
             <span className="chip">{t.fearChip3}</span>
           </div>
-          <div className="reveal flex flex-wrap gap-3 pt-2">
+          <div className="reveal flex flex-wrap gap-3 pt-2 max-[980px]:order-2">
             <BookButton serviceId="pregled" className="btn btn-p">
               {t.fearCta}
             </BookButton>

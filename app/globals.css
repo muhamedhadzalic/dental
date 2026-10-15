@@ -275,7 +275,8 @@
   .burger { display: inline-flex; }
   .hero-grid, .split { grid-template-columns: 1fr; gap: 40px; }
   .hero-grid { gap: 26px; }
-  .hero-text { display: contents; }
+  .m-contents { display: contents; }
+  .nervous-grid { gap: 22px; }
   .masonry { columns: 2; }
 }
 
